@@ -49,6 +49,16 @@ interface ProjectDao {
     @Query("SELECT * FROM projects WHERE id = :projectId")
     suspend fun getProjectWithTasks(projectId: Int): ProjectWithTasks
 
+    @Query("SELECT * FROM projects ORDER BY id")
+    suspend fun getAllProjectsOnce(): List<Project>   // one-time snapshot
+
+    @Query("SELECT * FROM projects ORDER BY id")
+    fun getAllProjectsFlow(): kotlinx.coroutines.flow.Flow<List<Project>>
+
+    @Query("DELETE FROM projects WHERE title LIKE 'Temp %' OR title = 'Temp-Demo'")
+    suspend fun deleteTempProjects()
+
+
 }
 
 // ---------- Task ----------
@@ -62,6 +72,11 @@ interface TaskDao {
 
     @Query("SELECT * FROM tasks ORDER BY id")
     suspend fun getAll(): List<Task>
+
+    @Query("SELECT * FROM tasks WHERE projectId = :projectId ORDER BY id")
+    fun tasksForProjectFlow(projectId: Int): Flow<List<Task>>
+
+
 }
 
 // ---------- Attachment ----------
