@@ -31,7 +31,7 @@ Covers schema design, DAO queries, type converters, relations, Flow vs Suspend, 
 
 ## 2. UML Diagram
 
-<img width="143" height="62" alt="schema" src="https://github.com/user-attachments/assets/ec64d324-61e8-4e1b-8064-704f64fa5604" />
+<img width="1435" height="62" alt="schema" src="https://github.com/user-attachments/assets/ec64d324-61e8-4e1b-8064-704f64fa5604" />
 
 ## 2.2 Seeding (DBSeed)
 
