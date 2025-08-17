@@ -30,7 +30,8 @@ Covers schema design, DAO queries, type converters, relations, Flow vs Suspend, 
 ---
 
 ## 2. UML Diagram
-<img width="1438" height="628" alt="schema" src="https://github.com/user-attachments/assets/d0493bd0-ce96-426f-a3a8-8ef7f735a476" />
+<img width="1407" height="558" alt="schema" src="https://github.com/user-attachments/assets/480b0e0f-5c35-455f-ba90-0e79ee453350" />
+
 
 
 
